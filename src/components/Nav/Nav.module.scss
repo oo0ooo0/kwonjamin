@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $nav-width;
+  background: $color-bg;
+  border-right: 0.5px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px 24px;
+  z-index: 100;
+}
+
+.brand {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: $color-text;
+}
+
+.link {
+  font-size: 9px;
+  letter-spacing: 0.07em;
+  color: $color-muted;
+  font-family: $font-mono;
+  text-align: left;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+
+  a {
+    font-size: 8.5px;
+    color: #ccc;
+    font-family: $font-mono;
+    letter-spacing: 0.04em;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .nav {
+    display: none;
+  }
+}
